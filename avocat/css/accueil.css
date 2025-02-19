@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+ /* En-tête */
+header {
+    background-color: #edf2f8;
+    color: #181515;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease forwards; /* Animation d'apparition */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    height: 50px;
+    transition: transform 0.3s ease; /* Animation de transformation */
+  }
+  
+  .logo img:hover {
+    transform: rotate(360deg); /* Rotation au survol */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #0a0909;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Ajout d'animation de transformation */
+    position: relative;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease; /* Animation de soulignement */
+  }
+  
+  .nav-links a:hover {
+    color: #3498db;
+    transform: scale(1.1); /* Agrandissement au survol */
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%; /* Soulignement au survol */ }
+  
+ /* Contenu principal */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.text {
+  flex: 2; /* Prend plus d'espace que l'image */
+  padding-right: 20px;
+  font-size: 1.1rem; /* Ajuster la taille du texte */
+  line-height: 1.6;
+}
+
+.image {
+  flex: 1;
+  text-align: right;
+  
+  
+}
+
+.image img {
+  max-width: 100%; /* Garantit que l'image ne dépasse pas */
+  height: auto;
+  border-radius: 8px;
+  animation: zoomIn 1s ease-in-out;
+  
+}
+
+/* Media Queries pour les écrans plus petits */
+@media (max-width: 1024px) {
+.content {
+  flex-direction: column; /* Empile le texte et l'image sur les écrans plus petits */
+  text-align: center; /* Centre le contenu */
+}
+
+.text {
+  padding-right: 0; /* Évite l'espace supplémentaire sur les petits écrans */
+  padding-bottom: 20px; /* Espacement entre le texte et l'image */
+}
+
+.image {
+  text-align: center; /* Centre l'image */
+  margin-top: 20px; /* Espacement entre le texte et l'image */
+}
+}
+
+/* Media Queries pour les très petits écrans (téléphones mobiles) */
+@media (max-width: 600px) {
+.text {
+  font-size: 1rem; /* Réduire la taille du texte sur les petits écrans */
+}
+
+.image img {
+  max-width: 90%; /* Réduit la taille de l'image sur mobile */
+}
+}
+/* Galerie */
+  .gallery {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .photos img {
+    max-width: calc(33.333% - 10px);
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .info-box {
+      background-color: white;
+      border: 4px solid hsl(240, 78%, 52%);
+      padding: 90px;
+      border-radius: 10px;
+      width: 400px;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+  }
+  .info-box h2 {
+      text-align: center;
+      color: #090a0a;
+  }
+  .info-item {
+      margin: 10px 0;
+      color: #070808;
+    
+  }
+  .info-label {
+      font-weight: bold;
+      color: #0d0e0f;
+  }
+
+  /* Footer */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permet aux éléments de se répartir sur plusieurs lignes */
+}
+
+.ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.ul li a {
+  color: #0a0909;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.ul li a:hover::after {
+  width: 100%;
+}
+
+.ul li a:hover {
+  color: #3498db;
+  transform: scale(1.1);
+}
+
+.sponsor-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre le contenu sur les petits écrans */
+  flex-wrap: wrap; /* Permet aux logos de se répartir sur plusieurs lignes si nécessaire */
+}
+
+.sponsor-logos p {
+  color: #0a0909;
+}
+
+.sponsor-logos img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+.social-media h3 {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-media img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.2);
+}
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+  .sponsors {
+      flex-direction: column; /* Empile les éléments sur les petits écrans */
+      align-items: center;
+  }
+
+  .ul li {
+      display: block; /* Affiche chaque lien sur une nouvelle ligne */
+      margin: 5px 0; /* Ajoute de l'espace entre les liens */
+  }
+
+  .sponsor-logos {
+      justify-content: center; /* Centre les logos sur les petits écrans */
+  }
+}
+/* Bouton de retour en haut */
+.scroll-to-top {
+  position: fixed; /* Fixe le bouton à l'écran */
+  bottom: 20px; /* Position en bas */
+  right: 20px; /* Position à droite */
+  background-color: #3498db; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 50%; /* Forme ronde */
+  width: 50px; /* Largeur */
+  height: 50px; /* Hauteur */
+  font-size: 24px; /* Taille de l'icône */
+  cursor: pointer; /* Curseur en forme de main */
+  display: none; /* Caché par défaut */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Animation */
+}
+
+.scroll-to-top:hover {
+  background-color: #2980b9; /* Changement de couleur au survol */
+}
+
+.scroll-to-top.visible {
+  display: flex; /* Affiche le bouton */
+}

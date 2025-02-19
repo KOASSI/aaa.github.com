@@ -1,0 +1,152 @@
+/* Réinitialisation des marges et des paddings */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style de base pour le corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* En-tête */
+header {
+  background-color: #eff5fc;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #110f0f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #3498db;
+}
+
+/* Conteneur principal */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permet le passage à la ligne sur les petits écrans */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section texte */
+.text {
+  flex: 2;
+  padding-right: 20px;
+}
+
+/* Section images */
+.image {
+  flex: 1;
+  text-align: right;
+}
+
+/* Style des images */
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Style du titre */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+/* Style des paragraphes */
+p {
+  margin-bottom: 15px;
+}
+
+footer {
+  background-color: #f1f1f1; /* Couleur de fond */
+  padding: 20px; /* Espacement intérieur */
+  text-align: center; /* Centrer le texte */
+}
+
+.sponsors {
+  display: flex; /* Disposition en flexbox */
+  justify-content: space-between; /* Espacement entre les éléments */
+  align-items: center; /* Aligner les éléments au centre verticalement */
+  margin-bottom: 20px; /* Marge inférieure */
+}
+
+.ul {
+  list-style-type: none; /* Supprimer les puces de liste */
+  padding: 0; /* Supprimer le padding */
+}
+
+.ul li {
+  display: inline; /* Disposition des éléments en ligne */
+  margin-right: 15px; /* Marge droite entre les éléments */
+}
+
+.sponsor-logos {
+  display: flex; /* Disposition en flexbox */
+  align-items: center; /* Aligner les éléments au centre verticalement */
+}
+
+.sponsor-logos img {
+  max-width: 100px; /* Largeur maximale de l'image */
+  margin-right: 10px; /* Marge droite entre l'image et le texte */
+}
+
+.social-media {
+  margin-top: 20px; /* Marge supérieure */
+}
+
+.social-media h3 {
+  margin-bottom: 10px; /* Marge inférieure */
+}
+
+.social-media a {
+  margin-right: 10px; /* Marge droite entre les icônes */
+  display: inline-block; /* Disposition en ligne */
+}
+
+.social-media img {
+  width: 80px; /* Largeur des icônes */
+  height: auto; /* Hauteur automatique */
+}
